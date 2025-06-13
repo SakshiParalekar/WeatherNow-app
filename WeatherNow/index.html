@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF_8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WeatherNow</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>⛅WeatherNow</h1>
 
+            <div class="search-box">
+                <div id="loader" class="hidden">
+                    <img src="images/loadergif.gif"
+                    alt="Loading..." width="50" >
+                </div>
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button onclick="getWeather()">Search</button>
+            </div>
+
+            <div id="weatherInfo" class="weather-box hidden">
+                <h2 id="cityName"></h2>
+                <p id="dateTime"></p>
+                <p><strong>Temperature:</strong><span id="temp"></span>°C</p>
+                <p><strong>Condition:</strong><span id="condition"></span></p>
+                <p><strong>Humidity:</strong><span id="humidity"></span>%</p>
+                <p><strong>Wind Speed:</strong><span id="wind"></span>km/h</p>
+                <img id="weatherIcon" src="" alt="Waether Icon"/>
+            </div>
+            <p id="errorMsg" class="error hidden"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
